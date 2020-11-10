@@ -1,0 +1,12 @@
+<h1><%= @article.title %></h1>
+<%= @article.content %>
+</br>
+</br>
+<%# <%= @article.completed ? "[X] This article is completed" : "[ ] This article is not completed yet" %>
+<%= link_to "Edit this article", edit_article_path %>
+</br>
+</br>
+<%= link_to "Delete article", article_path(@article), method: :delete, data: { confirm: "Delete #{@article.title}?"} %>
+</br>
+</br>
+<%= link_to "Back to list", articles_path %>
